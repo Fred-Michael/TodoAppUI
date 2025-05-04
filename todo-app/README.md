@@ -19,10 +19,11 @@ Tech Stack
 
 ### Setup Guide
 1. Clone the repository
-` git clone <repository-url>
-cd todo-app `
+` git clone <repository-url> `
 
-2. Install dependencies
+2. ` cd todo-app `
+
+3. Install dependencies
 ` npm install `
 
 4. Run the application using the command ` ng serve --open `. This should launch your app on port 4200 in the browser, and you should see the todo app. You should be able to add, edit, delete, and view a to-do app
