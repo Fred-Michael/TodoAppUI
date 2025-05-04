@@ -30,4 +30,4 @@ Tech Stack
 ### Thoughts and improvements
 What I couldn't implement due to time constraints, but would do if I had more time, would be:
 - to write comprehensive unit tests for each component and service
-- to add logging into the application in critical places like CRUD operations in the service layers for easy debugging.
+- to add logging in the application
