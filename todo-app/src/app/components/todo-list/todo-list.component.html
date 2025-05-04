@@ -1,0 +1,38 @@
+<div class="container">
+    <h2>To-Do List</h2>
+
+    <div class="todo-form">
+        <input type="text" [(ngModel)]="newTodo.title" placeholder="Title" required>
+        <textarea [(ngModel)]="newTodo.description" (input)="validateDescription()" placeholder="Description" maxlength="500"></textarea>
+        <p *ngIf="showDescriptionError" class="error">⚠️ Description cannot exceed 500 characters!</p>
+        <input type="date" [(ngModel)]="newTodo.dueDate" required>
+        <p *ngIf="showDateError" class="error"> Please enter a date when creating a todo list</p>
+        <button (click)="addTodo()">Add To-Do</button>
+    </div>
+
+    <ul>
+      <li *ngFor="let todo of todos">
+        <div class="todo-item">
+          <h3><a [routerLink]="['/todo', todo.id]">{{ todo.title }}</a></h3>
+          <p>{{ todo.description || 'No Description' }}</p>
+          <p><strong>Date:</strong> {{ todo.dueDate || 'No Due Date' }}</p>
+
+          <p>
+            <strong>Status:</strong>
+            <span [ngClass]="todo.isCompleted ? 'completed-icon' : 'incomplete-icon'">
+              {{ todo.isCompleted ? '✅' : '❌' }}
+            </span>
+          </p>
+    
+          <div class="actions">
+            <button [ngClass]="todo.isCompleted ? 'complete-btn' : 'incomplete-btn'" 
+                (click)="toggleCompletion(todo.id, todo.isCompleted)">
+            {{ todo.isCompleted ? 'Complete' : 'Incomplete' }}
+            </button>
+            <button [routerLink]="['/edit', todo.id]">Edit</button>
+            <button (click)="deleteTodo(todo.id)">Delete</button>
+          </div>
+        </div>
+      </li>
+    </ul>
+</div>

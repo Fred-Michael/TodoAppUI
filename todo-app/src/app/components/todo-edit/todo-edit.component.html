@@ -1,0 +1,10 @@
+<div class="container">
+    <h2>Edit To-Do Item</h2>
+    <div class="todo-form">
+      <input type="text" [(ngModel)]="todo.title" placeholder="Title" required>
+      <input type="text" [(ngModel)]="todo.description" placeholder="Description">
+      <input type="date" [(ngModel)]="todo.dueDate">
+      <button id="update" (click)="updateTodo()">Update To-Do</button> &nbsp;
+      <button id="cancel" routerLink="/">Cancel</button>
+    </div>
+</div>
