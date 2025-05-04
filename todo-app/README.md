@@ -8,10 +8,10 @@ Note: Before you launch this app, ensure you have the backend (https://github.co
 - Frontend Setup Guide
 - Thoughts and improvements
 
-Frontend (Angular)
+## Frontend (Angular)
 The frontend provides a simple UI for creating, editing, deleting, and viewing a todo list item.
 
-Tech Stack
+### Tech Stack
 - Language: TypeScript
 - Framework: Angular
 - Docker
